@@ -1,0 +1,1943 @@
+body > ul {
+	position: fixed;
+	z-index: 10;	
+    list-style: none;
+    border: none;
+}
+body {
+	font-family: 'Orbitron', arial, helvetica, sans-serif;
+}
+.slide {
+	color: white;
+	text-align: center;
+}
+#fp-nav ul li a span {
+	background: white;
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 30px;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+    height: 30px;
+    width: 3px;
+    margin: -2px 0 0 -3px; 
+    background: rgba(255, 204, 0, 0.5);
+}
+
+
+#fp-nav ul li .fp-tooltip {
+  	position: absolute;
+  	top: 6px;
+  	color: #fff;
+  	font-size: 14px;
+  	font-family: 'Orbitron', arial, helvetica, sans-serif;
+  	white-space: nowrap;
+  	max-width: 220px;
+  	overflow: hidden;
+  	display: block;
+  	opacity: 0;
+  	width: 0;
+  	cursor: pointer;
+}
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+  	height: 30px;
+  	width: 3px;
+  	margin: -2px 0 0 -6px;
+  	border-radius: 0;
+  	background: #FFCC00;
+}
+
+#fp-nav ul li, 
+.fp-slidesNav ul li {
+  	display: block;
+  	width: 14px;
+  	height: 35px;
+  	margin: 3px;
+  	position: relative;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    position: absolute;
+    border-radius: 0;
+    z-index: 1;
+    height: 30px;
+    width: 3px;
+    background: transparent;
+    left: 0;
+    top: 0;
+    margin: -2px 0 0 -2px;
+    border: 1px solid #FFCC00;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+#fullpage #homeScreen,
+#fullpage #workScreen {
+  	background: #141414!important; 
+}
+#fullpage #aboutScreen,
+#fullpage #contactScreen {
+  	background: #141414!important; 
+}
+
+
+/*===============================================
+		HOME SECTION
+===============================================*/
+
+
+#fullpage #homeScreen .profile_pic {
+  	width: 25em;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    border: 4px solid white;
+    transition: 0.4s ease-in;
+    opacity: 0.5;
+    user-select: none;
+}	
+#fullpage #homeScreen .profile_pic:hover {
+  	width: 25em;
+    height: auto;
+    border-radius: 30%;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid grey;
+    transition: 0.4s ease-in;
+    opacity: 1;
+}
+
+.controlButton {
+	position: fixed;
+	top: 10px;
+	width: 50px;
+	height: 46px;
+	border-radius: 10%;
+	right: 10px;
+	color: #FFCC00;
+	background-color: transparent;
+	border: 2px solid #FFCC00;
+	z-index: 2;
+	text-align: center;
+    transition: all 0.3s ease-in;
+    line-height: 48px;
+    cursor: pointer;
+}	
+.controlButton:hover {
+	color: black;
+	background-color: #FFCC00;
+}
+.controlButton:hover::before {
+	content: "Extra-Controls";
+    width: 140px;
+    position: fixed;
+    border-radius: 0;
+    color: white;
+    right: 10px;
+    top: 50px;
+}
+
+#arrowTop,
+#arrowDown {
+	position: fixed;
+    width: 70%;
+    height: 35px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 15px;
+    z-index: 1;
+    left: 15%;
+    transition: all 0.3s ease-in;
+}
+#arrowTop {
+  	top: 0;
+    border-bottom: 2px solid rgba(255, 204, 0, 0.2);
+    padding-top: 3px;
+}
+#arrowDown {
+  	bottom: 0;
+  	border-top: 2px solid rgba(255, 204, 0, 0.2);
+    padding-top: 3px;  
+}
+
+#arrowDown p,
+#arrowTop p {
+  	color: #FFCC00;
+  	margin: 0;
+}
+#arrowDown:hover,
+#arrowTop:hover {
+  	border-radius: 50%;
+  	border-color: #FFCC00;
+  	cursor: pointer;
+}
+
+
+#arrowDown p:nth-child(2),
+#arrowTop p:nth-child(2) {
+  	margin-top: -10px;
+}
+.menubutton {
+	position: fixed;
+	z-index: 10;
+	outline: none;
+	border: none;
+	width: 46px;
+	height: 46px;
+	font-size: 20px;
+	border-radius: 50%;
+	top: 10px;
+	left: 10px;
+	background: transparent;
+	color: #FFCC00;
+	cursor: pointer;
+	text-align: center;
+    list-style: none;
+    border: 2px solid #FFCC00;
+    line-height: 48px;
+}
+
+.menubutton:hover {
+	background-color: #FFCC00;
+	color: #000000;
+	transition: all 0.5s;
+}
+
+
+.openMenu {
+	position: fixed;
+    z-index: 10;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	outline: none;
+	color: #FFCC00;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	background: transparent;
+    list-style: none;
+    text-decoration: none;
+    border: 1px solid #FFCC00;
+    line-height: 28px;
+}
+
+.openMenu:hover {
+	background-color: #FFCC00;
+	color: #000000;
+	transition: all 0.4s;
+}
+
+.homeBtn {
+	top: 7px;
+	left: 81px;
+}
+.homeBtn:hover::after {
+	content: "Home";
+    width: 85px;
+    position: fixed;
+    border-radius: 0;
+    color: white;
+    font-family: "Orbitron";
+}
+.aboutBtn {
+	top: 45px;
+	left: 75px;
+}
+.aboutBtn:hover::after {
+	content: "About";
+    width: 85px;
+    position: fixed;
+    border-radius: 0;
+    color: white;
+    font-family: "Orbitron";
+}
+.workBtn {
+	top: 75px;
+	left: 50px;
+}
+.workBtn:hover::after {
+	content: "Work & Skills";
+    width: 100px;
+    position: fixed;
+    border-radius: 0;
+    color: white;
+    font-family: "Orbitron";
+}
+.contactBtn {
+	top: 84px;
+	left: 10px;
+}
+.contactBtn:hover::after {
+	content: "Contact";
+    width: 75px;
+    top: 120px;
+    position: fixed;
+    border-radius: 0;
+    color: white;
+    font-family: "Orbitron";
+}
+#fullpage #homeScreen .title,
+#fullpage #homeScreen .nickname {
+    font-size: 72px;
+    text-align: center;
+    color: #FFCC00;
+    letter-spacing: 10px;
+    cursor: default;
+    margin: 50px 0;
+    user-select: none;
+}
+#fullpage #homeScreen .title {
+	font-family: 'Love Ya Like A Sister';
+	color: #FFCC00;
+	text-align: center;
+  font-size: 68px;
+}
+
+#fullpage #homeScreen .title span {
+    display: none;    
+}
+
+
+/*===============================================
+		ABOUT SECTION
+===============================================*/
+
+
+#fullpage #aboutScreen .container {
+	margin-top: 20px;
+}
+#fullpage #aboutScreen .container .timeline {
+	width: 950px;
+	height: 28px;
+	margin: 100px auto;
+	font-size: 14px;
+	padding: 2px;
+	align-items: center;
+}
+
+#fullpage #aboutScreen .container .timeline p {
+	display: none;
+}
+
+#fullpage #aboutScreen .container #timeline1989 {
+
+}
+
+#fullpage #aboutScreen .container .timeline:nth-child(6) p:nth-child(4) {
+	display: none!important;	
+}
+#fullpage #aboutScreen .container .timeline p:nth-child(1){
+	width: 50px;
+	text-align: center;
+	line-height: 28px;
+}
+#fullpage #aboutScreen .container .timeline p:nth-child(2){
+	width: 70px;
+    height: 70px;
+    margin: 0;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+}
+.middleBox1989 {
+	background: url(img/Baby.png);
+	background-position: 8px 3px;
+;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+.middleBox1996 {
+	background: url(img/Kid.png);
+	background-position: 8px 3px;
+;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+.middleBox2000 {
+	background: url(img/Child.png);
+	background-position: 8px 3px;
+;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+.middleBox2006 {
+	background: url(img/Teenager.png);
+	background-position: 8px 3px;
+;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+.middleBox2008 {
+	background: url(img/Man.png);
+	background-position: 8px 3px;
+;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+.middleBox2017 {
+	background: url(img/Nerd.png);
+	background-position: 8px 3px;
+;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+#fullpage #aboutScreen .container .timeline p:nth-child(3){
+	width: 750px;
+	text-align: justify;
+	letter-spacing: 1px;
+}
+#fullpage #aboutScreen .container .timeline:nth-child(1) p:nth-child(3) {
+	line-height: 28px;
+}
+#fullpage #aboutScreen .container .timeline p:nth-child(4) {
+	width: 2px;
+    height: 55px;
+    background-color: white;
+    position: relative;
+    top: 53px;
+    left: 82px;
+}
+
+#fullpage #aboutScreen .container .timeline .timeLineBox {
+	float: left;
+	color: white;
+}
+/*#fullpage #aboutScreen .container #timeline1989 {
+	height: 36px;
+}
+#fullpage #aboutScreen .container #timeline1996 {
+	height: 120px;
+}
+#fullpage #aboutScreen .container #timeline2000 {
+	height: 88px;
+}
+#fullpage #aboutScreen .container #timeline2006 {
+	height: 119px;
+}
+#fullpage #aboutScreen .container #timeline2008 {
+	height: 105px;
+}
+#fullpage #aboutScreen .container #timeline2017 {
+	height: 90px;
+}*/
+
+
+/*===============================================
+		WORK SECTION
+===============================================*/
+
+.fp-controlArrow.fp-prev {
+  left: 20px;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent rgba(255, 255, 255, 0.3) transparent transparent;
+}
+.fp-controlArrow.fp-next {
+  right: 50px;
+  border-width: 38.5px 0 38.5px 34px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+}
+.fp-controlArrow.fp-prev:hover {
+  border-color: transparent rgba(255, 255, 255, 1) transparent transparent;
+}
+.fp-controlArrow.fp-next:hover {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1)
+}
+#fullpage #workScreen h1 {
+  letter-spacing: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+}
+
+#fullpage #workScreen .box {
+  height: 100%;
+}
+#fullpage #workScreen .box .workDisplay {
+  float: left;
+  width: 25%;
+  margin-top: -5px;
+}
+
+#fullpage #workScreen .box .workDisplay .image-box {
+  position: relative;
+}
+#fullpage #workScreen .box .workDisplay .image-box img {
+  width: 100%;
+}
+#fullpage #workScreen .box .workDisplay .image-box .hover-image {
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: none;
+  color: black;
+  cursor: pointer;
+  animation-name: zoomIn;
+  animation-duration: 0.6s;
+  font-size: 24px;
+}
+#fullpage #workScreen .box .workDisplay .image-box:hover .hover-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*===============================================
+    CONTACT SECTION
+===============================================*/
+#contactScreen .float {
+  float: left;
+  width: 50%;
+}
+#contactScreen .contactSide {
+  width: 50%;
+}
+#contactScreen #map {
+  width: 50%;
+  height: 100%;
+}
+
+
+
+
+/* Modify the width/height/font size in order to integrate in your div/website */
+/* For example if you want to make it 2 times smaller just divide width, height and font-size by 2
+width will be 700px/2 = 350px
+height will be 440px/2 = 220px
+font-size will be 16px/2 = 2px*/
+/* Hope you enjoy it */
+
+.container .workingMonitor {
+  width: 350px;
+  height: 220px;
+  margin: 0 30px;
+  font-size: 8px;
+  float: left;
+}
+
+/* SCREEN */
+.container .workingMonitor .screen {
+  width: 100%;
+  height: 79.54545%;
+  background: white;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 17px solid black;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  font-size: 100%;
+}
+.container .workingMonitor .screen .screenMonitor {
+  width: 100%;
+  height: 100%;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenLogo {
+  background: rgba(210, 53, 60, 0.6);
+  width: 30%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenLogo:hover {
+  background: rgb(210, 53, 60);
+}
+.container .workingMonitor .screen .screenMonitor .inScreenTopBar {
+  background: rgba(210, 156, 57, 0.6);
+  width: 50%;
+  height: 15%;
+  margin: 1.5%;
+  float: right;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenTopBar:hover {
+  background: rgb(210, 156, 57);
+}
+.container .workingMonitor .screen .screenMonitor .inScreenContent {
+  background: rgba(15, 113, 15, 0.6);
+  width: 30.3%;
+  height: 50%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenContent:hover {
+  background: rgb(15, 113, 15);
+}
+.container .workingMonitor .screen .screenMonitor .inScreenFooter {
+  background: rgba(0, 46, 152, 0.6);
+  width: 97.5%;
+  height: 10%;
+  margin: 1%;
+  margin-top: 0;
+  float: left;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenFooter:hover {
+  background: rgb(0, 46, 152);
+}
+.container .workingMonitor .screen .screenMonitor .inScreenStartBar {
+  background: rgba(80, 80, 80, 1);
+  width: 99.6%;
+  height: 7%;
+  margin-top: 1%;
+  float: left;
+  padding: 0.5% 0.5% 0 0;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenStartBar .fa {
+  color: white;
+  font-size: 80%;
+  margin: -0.5% 1% 0 1%;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenStartBar input {
+  font-size: 70%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #676767;
+  color: #dcdcdc;
+  margin-top: -0.2%;
+  position: relative;
+  top: -2px;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenStartBar input::-webkit-input-placeholder {  
+  color: #dcdcdc;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenStartBar #timeMonitor {
+  float: right;
+  font-size: 70%;
+  color: white;
+  margin-top: 0.4%;
+}
+.container .workingMonitor .screen .screenMonitor .inScreenStartBar .fa-comment-o {
+  float: right;
+}
+
+
+.container .workingMonitor .screen .screenMonitorOff {
+  background-color: #3a3a3a;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.container .workingMonitor .screen .screenMonitorMenu {
+  background-color: rgba(110, 110, 110, 0.85);
+  position: relative;
+  margin-top: -47.5%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* SCREEN CONTROL BUTTONS */
+
+.container .workingMonitor .screenControl {
+  width: 100%;
+  height: 11.36364%;
+  background: rgb(210, 210, 210);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 125%;
+}
+.container .workingMonitor .screenControl .monitorLogo {
+  float: left;
+  margin-top: 1.5%;
+  margin-left: 49%;
+}
+.container .workingMonitor .screenControl .monitorButtons {
+  background: transparent;
+  width: 150px;
+  height: 40px;
+  float: right;
+  margin-top: 0.7%;
+  margin-right: 2.9%;
+  border-radius: 5px;
+  line-height: 5px;
+  text-align: center;
+}
+.container .workingMonitor .screenControl .monitorButtons .control {
+  float: right;
+  margin-top: 1.8%;
+  margin-right: 0.005%;
+}
+.container .workingMonitor .screenControl .monitorButtons .control .btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 80%;
+}
+.container .workingMonitor .screenControl .monitorButtons .control .fa-circle {
+  font-size: 6px;
+  margin-right: 3px;
+  color: green;
+  font-size: 40%;
+}
+.container .workingMonitor .screenControl .monitorButtons .control #lightOnOff {
+  
+}
+
+/* SCREEN SUPORT LEG */
+.container .workingMonitor .screenLeg {
+  width: 21.42857%;
+  height: 6.81818%;
+  background: rgb(64, 63, 63);
+  margin: 0 auto;
+}
+.container .workingMonitor .screenFoot {  
+  width: 42.85714%;
+  height: 2.27273%;
+  border-radius: 10px;
+  background: rgb(64, 63, 63);
+  margin: 0 auto;
+}
+
+
+/* Modify the width/height/font size in order to integrate in your div/website */
+/* For example if you want to make it 2 times smaller just divide width, height and font-size by 2
+width will be 320px/2 = 160px
+height will be 400px/2 = 200px
+font-size will be 16px/2 = 2px*/
+/* Hope you enjoy it */
+
+.container .workingTablet {
+  width: 160px;
+  height: 200px;
+  margin: 0 30px;
+  font-size: 8px;
+  float: left;
+}
+.container .workingTablet .borderTablet {
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 16px; 
+  padding-top: 10%;
+}
+
+.container .workingTablet .borderTablet .screenTablet {
+  width: 90%;
+  height: 90%;
+  background: white;
+  box-sizing: border-box;
+  margin: 0 auto;   
+  font-size: 100%;
+}
+.container .workingTablet .borderTablet .screenTablet .topBar {
+  width: 100%;
+  height: 6%;
+  background: rgba(80, 80, 80, 1);
+  color: white;
+}
+.container .workingTablet .borderTablet .screenTablet .topBar i {
+  float: right;
+  font-size: 70%;
+  margin: 1.5% 1.5% 0 0;
+}
+.container .workingTablet .borderTablet .screenTablet .topBar #timeTablet {
+  float: right;
+  font-size: 70%;
+  margin: 1% 1% 0 0;
+}
+.container .workingTablet .borderTablet .screenTablet .redBox {
+  background: rgba(210, 53, 60, 0.6);
+  width: 40%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingTablet .borderTablet .screenTablet .redBox:hover {
+  background: rgba(210, 53, 60, 1);
+}
+.container .workingTablet .borderTablet .screenTablet .orangeBox {
+  background: rgba(210, 156, 57, 0.6);
+  width: 54%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingTablet .borderTablet .screenTablet .orangeBox:hover {
+  background: rgba(210, 156, 57, 1);
+}
+.container .workingTablet .borderTablet .screenTablet .greenBox {
+  background: rgba(15, 113, 15, 0.6);
+  width: 97%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingTablet .borderTablet .screenTablet .greenBox:hover {
+  background: rgba(15, 113, 15, 1);
+}
+.container .workingTablet .borderTablet .screenTablet .blueBox {
+  background: rgba(0, 46, 152, 0.6);
+  width: 47%;
+  height: 38%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingTablet .borderTablet .screenTablet .blueBox:hover {
+  background: rgba(0, 46, 152, 1);
+}
+.container .workingTablet .borderTablet .screenTablet .blue2Box {
+  background: rgba(0, 46, 152, 0.6);
+  width: 97%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingTablet .borderTablet .screenTablet .blue2Box:hover {
+  background: rgba(0, 46, 152, 1);
+}
+
+.container .workingTablet .borderTablet .homeButton {
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 160%;
+  margin: 2.5555% auto;  
+}
+
+
+/* Modify the width/height/font size in order to integrate in your div/website */
+/* For example if you want to make it 2 times smaller just divide width, height and font-size by 2
+width will be 320px/2 = 160px
+height will be 400px/2 = 200px
+font-size will be 16px/2 = 2px*/
+/* Hope you enjoy it */
+
+.container .workingSmartPhone {
+  width: 60px;
+  height: 120px;
+  margin: 50px 30px;
+  font-size: 5px;
+  float: left;
+}
+.container .workingSmartPhone .borderSmartPhone {
+  width: 100%;
+  height: 90%;
+  background: black;
+  border-radius: 8px;
+  padding-top: 20%;
+}
+
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone {
+  width: 90%;
+  height: 90%;
+  background: white;
+  box-sizing: border-box;
+  margin: 0 auto;   
+  font-size: 100%;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .topBar {
+  width: 100%;
+  height: 6%;
+  background: rgba(80, 80, 80, 1);
+  color: white;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .topBar i {
+  float: right;
+  font-size: 70%;
+  margin: 1.5% 1.5% 0 0;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .topBar #timePhone {
+  float: right;
+  font-size: 70%;
+  margin: 1% 1% 0 0;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .redBox {
+  background: rgba(210, 53, 60, 0.6);
+  width: 98%;
+  height: 15%;
+  margin: 3% 1.5% 1.5% 1.5%;
+  float: left;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .redBox:hover {
+  background: rgba(210, 53, 60, 1);
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .orangeBox {
+  background: rgba(210, 156, 57, 0.6);
+  width: 98%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .orangeBox:hover {
+  background: rgba(210, 156, 57, 1);
+}
+
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .blueBox {
+  background: rgba(0, 46, 152, 0.6);
+  width: 98%;
+  height: 60%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .blueBox:hover {
+  background: rgba(0, 46, 152, 1);
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .blue2Box {
+  background: rgba(0, 46, 152, 0.6);
+  width: 97%;
+  height: 15%;
+  margin: 1.5%;
+  float: left;
+}
+.container .workingSmartPhone .borderSmartPhone .screenSmartPhone .blue2Box:hover {
+  background: rgba(0, 46, 152, 1);
+}
+
+.container .workingSmartPhone .borderSmartPhone .homeButton {
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 160%;
+  margin: 2.5555% auto; 
+  
+}
+@media only screen and (max-width : 1024px) {
+  #fullpage #workScreen .box .workDisplay {
+    width: 33.33%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .container .workingMonitor {
+    width: 525px;
+    height: 330px;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+  .container .workingMonitor .screen .screenMonitorMenu {
+    margin-top: -46.5%;
+  }
+  #fullpage #workScreen .box .workDisplay {
+    width: 50%;
+  }
+  .comingSoon {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .container .workingMonitor {
+    width: 350px;
+    height: 220px;
+    margin: 0 auto;
+    font-size: 8px;
+  }
+  .container .workingMonitor .screen .screenMonitorMenu {
+    margin-top: -44.5%;
+  }
+  .container .workingMonitor .screen .screenMonitor .inScreenStartBar input {
+  	height: 90%;
+  }
+  .container .workingMonitor .screen .screenMonitor .inScreenStartBar #time,
+  .container .workingMonitor .screen .screenMonitor .inScreenStartBar i {
+    margin-top: 0.5%;
+  }
+  #fullpage #workScreen .box .workDisplay .image-box .hover-image {
+    height: 97%;
+  }
+}
+.inScreenStartBar {
+	text-align: left;
+}
+
+/* Javascript classes */
+
+.active {
+  display: block;
+}
+.inactive {
+  display: none;
+}
+
+/*===== SLIDE 3 =====*/
+
+
+
+/*==============================================================
+	CONTACT PAGE
+==============================================================*/
+
+/*JAVA SCRIPT CLASSES*/
+.hiddenBtn {
+	display: none;
+	transition: all 0.4s ease-out;
+}
+.showBtn {
+	display: block;
+	transition: all 0.4s ease-in;
+}
+
+
+	/*MEDIA QUERIES*/
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+/*HOME PAGE*/
+	.menubutton {
+		width: 40px;
+	    height: 40px;
+	    line-height: 42px;
+	    top: 5px;
+	    left: 5px;
+	}
+	#fullpage #homeScreen .title {
+    	font-size: 14px;
+    	width: 95%;
+    	text-align: center;
+    	margin: 0px auto;
+    	margin-top: 50px;
+	}
+
+	#fullpage #homeScreen .nickname {
+   	    font-size: 30px;
+   	    margin-top: 85px;
+	}
+
+	#fp-nav.right {
+    	right: 17px;
+	}
+	#fp-nav ul li, .fp-slidesNav ul li {
+    	display: block;
+    	width: 0px;
+    	height: 35px;
+    	margin: 3px;
+    	position: relative;
+	}		
+	#fp-nav ul li .fp-tooltip.right {
+    	display: none;
+	}
+	#arrowTop, #arrowDown {
+    	position: fixed;
+    	width: 50%;
+    	height: 35px;
+    	text-align: center;
+    	box-sizing: border-box;
+    	font-size: 15px;
+    	z-index: 1;
+    	left: 25%;
+   		transition: 0.3s ease-in;
+	}
+	#fullpage #homeScreen .profile_pic {
+  		width: 14em;
+   		height: auto;
+   	 	border-radius: 50%;
+    	margin: -30px auto;
+    	display: block;
+	}
+	#fullpage #homeScreen .profile_pic:hover {
+		width: 14em;
+		margin: -30px auto;
+	}
+	.controlButton {
+		display: none;
+	}
+	.homeBtn:hover::after {
+		display: none;
+	}
+	.aboutBtn:hover::after {
+		display: none;
+	}
+	.workBtn:hover::after {
+		display: none;
+	}
+	.contactBtn:hover::after {
+		display: none;
+	}
+	.homeBtn {
+		animation-name: mobileMenuAnimationHome!important;
+		animation-duration: 1s;
+    	animation-timing-function: linear;
+    	left: 55px;
+    	top: 12px;
+	}
+	.homeBtnReverse {
+		animation-name: mobileMenuAnimationHome!important;
+		animation-direction: reverse;
+	}
+	.aboutBtn {
+		animation-name: mobileMenuAnimationAbout!important;
+		animation-duration: 1s;
+	    animation-timing-function: linear;
+	    left: 90.000px;
+    	top: 12px;
+	}
+	.workBtn {
+		animation-name: mobileMenuAnimationWork!important;
+		animation-duration: 1s;
+	    animation-timing-function: linear;
+	    left: 125.000px;
+    	top: 12px;
+	}
+	.contactBtn {
+		animation-name: mobileMenuAnimationContact!important;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		left: 160.000px;
+    	top: 12px;
+	}
+
+	/*ABOUT PAGE*/
+	#fullpage #aboutScreen .container {
+		margin-top: 5px;
+	}
+	#fullpage #aboutScreen .container .timeline {
+		width: 290px;
+		height: 78px;
+		margin: 0px auto;
+		font-size: 9px;
+		padding: 2px;
+		align-items: center;
+	}
+	#fullpage #aboutScreen .container .timeline .timeLineBox {
+		display: none;
+	}
+	body #fullpage #aboutScreen .container .timeline p {
+		display: none;
+	}
+	#fullpage #aboutScreen .container .timeline p:nth-child(1) {
+		width: 290px;
+		height: 17px;
+		text-align: center;
+		line-height: 18px;
+		background: #424242;
+		margin: 0;
+	}
+	#fullpage #aboutScreen .container .timeline p:nth-child(2) {
+		width: 55px;
+	    height: 45px;
+	    margin: 0;
+	    text-align: center;
+	    line-height: 47px;
+	    margin-top: 10px;
+	    border-right: 1px solid;	
+	}
+	
+	#fullpage #aboutScreen .container .timeline p:nth-child(3) {
+		width: 215px;
+	    height: 58px;
+	    float: left;
+	    margin: 0;
+	    align-items: center;
+	    padding: 2px;
+	    padding-left: 12px;
+	    display: none;
+	}
+	
+	#fullpage #aboutScreen .container .timeline p:nth-child(4) {
+		display: none!important;
+	}
+	body .fadeInLeft {
+	  animation-name: fadeInLeft;
+	  animation-duration: 1.5s;
+	  display: block!important;
+	}
+	body .fadeInRight {
+	  animation-name: fadeInRight;
+	  animation-duration: 1.5s;
+	  display: flex!important;
+	}
+	body .rotateIn {
+	  animation-name: zoomIn;
+	  animation-duration: 1.5s;
+	  display: block!important;
+	}
+	body .widthIn {
+	  animation-name: widthIn;
+	  animation-duration: 1.5s;
+	  display: block!important;
+	  animation-timing-function: linear;
+	}
+	.timeLineBox {
+		background-size: 40px 40px;
+	}
+
+	/*#fullpage #aboutScreen .container .timeline:nth-child(6) p:nth-child(4) {
+		display: block;
+	}*/
+}
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+	#fullpage #homeScreen .title {
+		font-size: 32px;
+    	width: 90%;
+    	text-align: center;
+    	margin: 0 auto;
+	}
+}
+
+
+
+
+	/*Keyframes Animations*/
+  
+@keyframes pulseAnimation {
+	from {
+	transform: scale3d(1, 1, 1);
+    transform-origin: center;
+	color: #adb10b;
+	}
+
+	50% {
+	transform: scale3d(1.05, 1.05, 1.05);
+    transform-origin: center;
+	color: rgba(239, 57, 24, 0.5);
+	}
+	to {
+    transform: scale3d(1, 1, 1);
+    transform-origin: center;
+    color: #adb10b;
+  }
+}
+
+@keyframes bounceInDownAnimation {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInDownAnimation {
+  animation-name: bounceInDownAnimation;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInLeftAnimation {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeftAnimation {
+  animation-name: fadeInLeftAnimation;
+  animation-duration: 2s;
+  display: inline-block!important;
+}
+
+@keyframes bounceInRightAnimation {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInRightAnimation {
+  animation-name: bounceInRightAnimation;
+  animation-duration: 2s;
+}
+
+@keyframes surpriseAnimation {
+    from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+    }
+
+    50% {
+    transform: rotate(-10deg);
+    }
+    70% {
+    transform: rotate(5deg);
+    }
+    to {
+    opacity: 1;
+    transform: scale(1);
+    }
+}
+
+.surpriseAnimation {
+	animation-name: surpriseAnimation;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+  display: block!important;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 1.5s;
+  display: block!important;
+}
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateIn {
+  animation-name: zoomIn;
+  animation-duration: 1.5s;
+  display: block!important;
+}
+@keyframes widthIn {
+  	0%   {height: 0px;}
+    100% {height: 55px;}
+}
+
+.widthIn {
+  animation-name: widthIn;
+  animation-duration: 1.5s;
+  display: block!important;
+  animation-timing-function: linear;
+}
+
+@keyframes zoomInDownAnimation {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInDownAnimation {
+  animation-name: zoomInDownAnimation;
+  animation-duration: 2s;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes flipXAnimation {
+	from {
+	transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+	animation-timing-function: ease-in;
+	opacity: 0;
+	}
+    40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+    }
+    60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+    }
+    80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    to {
+    transform: perspective(400px);
+    }
+}
+.flipXAnimation {  
+    animation-name: flipXAnimation;
+    animation-duration: 2s;
+}
+
+@keyframes rubberEffectHome {
+    0% {
+    top: 20px;
+    left: 20px;
+	}
+	/*10% { 
+    top: 27.444px; 
+    left: 35.667px;
+    }
+    20% { 
+    top: 24.889px; 
+    left: 41.333px;
+    }
+    30% {
+    top: 22.333px; 
+    left: 47.000px;
+    }
+    50% {
+    top: 19.778px; 
+    left: 52.667px;
+    }
+    60% { 
+    top: 17.222px; 
+    left: 58.333px;
+    }
+    70% { 
+    top: 14.667px;
+    left: 64.000px;
+    }
+    80% { 
+    top: 12.111px; 
+    left: 69.667px;
+    }
+    90% {
+    top: 9.556px; 
+    left: 75.333px;
+    }*/
+	  50% {
+    	transform: scale3d(1.35, 0.85, 1);
+  	}
+
+  	  60% {
+    	transform: scale3d(0.85, 1.35, 1);
+  	}
+
+ 	  70% {
+    	transform: scale3d(1.25, 0.95, 1);
+  	}
+
+      85% {
+    	transform: scale3d(1.05, 1.15, 1);
+  	}
+
+      95% {
+    	transform: scale3d(1.15, 1.05, 1);
+  	}
+	  100% {
+	    transform: scale3d(1, 1, 1);
+		top: 7px;
+		left: 81px;
+	}
+}
+
+.homeBtn {
+	animation-name: rubberEffectHome;
+	animation-duration: 1.2s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes rubberEffectAbout {
+	0% {
+		transform: scale(1);     
+		top: 20px;
+		left: 20px;
+	}
+	/*10% { 
+	top: 32.778px; 
+	left: 36.111px;
+	}
+	20% { 
+	top: 35.556px; 
+	left: 42.222px;
+	}
+	30% {
+	top: 38.333px; 
+	left: 48.333px;
+	}
+	50% {
+	top: 41.111px; 
+	left: 54.444px;
+	}
+	60% {
+	top: 43.889px; 
+	left: 60.556px;
+	}
+	70% { 
+	top: 46.667px;
+	left: 66.667px;
+	}
+	80% {
+	top: 49.444px; 
+	left: 72.778px;
+	}
+	90% {
+	top: 52.222px; 
+	left: 78.889px;
+	}*/
+	  50% {
+    	transform: scale3d(1.35, 0.85, 1);
+  	}
+
+  	  60% {
+    	transform: scale3d(0.85, 1.35, 1);
+  	}
+
+ 	  70% {
+    	transform: scale3d(1.25, 0.95, 1);
+  	}
+
+      85% {
+    	transform: scale3d(1.05, 1.15, 1);
+  	}
+
+      95% {
+    	transform: scale3d(1.15, 1.05, 1);
+  	}
+	  100% {
+	    transform: scale3d(1, 1, 1);
+		top: 45px;
+		left: 75px;
+	}
+}
+
+.aboutBtn {
+	animation-name: rubberEffectAbout;
+	animation-duration: 1.2s;
+    animation-timing-function: linear;
+}
+
+@keyframes rubberEffectWork {
+	  0% {
+	    transform: scale3d(1, 1, 1);    
+	    top: 20px;
+	    left: 20px;
+	  }
+	  /*10% { 
+	    top: 36.333px; 
+	    left: 32.667px;
+	  }
+	  20% { 
+	    top: 42.667px; 
+	    left: 35.333px;
+	  }
+	  30% {
+	    top: 49.000px; 
+	    left: 38.000px;
+	  }*/
+	  50% {
+    	transform: scale3d(1.35, 0.85, 1);
+  	}
+
+  	  60% {
+    	transform: scale3d(0.85, 1.35, 1);
+  	}
+
+ 	  70% {
+    	transform: scale3d(1.25, 0.95, 1);
+  	}
+
+      85% {
+    	transform: scale3d(1.05, 1.15, 1);
+  	}
+
+      95% {
+    	transform: scale3d(1.15, 1.05, 1);
+  	}
+	  100% {
+	    transform: scale3d(1, 1, 1);
+	    top: 75px;
+		left: 50px;
+	  }
+	}
+
+.workBtn {
+	animation-name: rubberEffectWork;
+	animation-duration: 1.2s;
+    animation-timing-function: linear;
+}
+
+@keyframes rubberEffectContact {
+	  0% {
+	    transform: scale(1);     
+	    top: 20px;
+	    left: 20px;
+	  }
+	  /*10% { 
+	    top: 36.000px; 
+	    left: 27.778px;
+	  }
+	  20% { 
+	    top: 42.000px; 
+	    left: 25.556px;
+	  }
+	  30% { 
+	    top: 48.000px; 
+	    left: 23.333px;
+	  }
+	  40% { 
+	    top: 54.000px; 
+	    left: 21.111px;
+	  }
+	  60% {
+	    
+	    top: 60.000px; 
+	    left: 18.889px;
+	  }
+	  70% {
+      top: 66.000;
+	    left: 16.667px;
+	  }
+	  80% {
+	    top: 72.000px; 
+	    left: 14.444px;
+	  }
+	  90% {
+	    top: 78.000px; 
+	    left: 12.222px;
+	  }*/
+	  50% {
+    	transform: scale3d(1.35, 0.85, 1);
+  	}
+
+  	  60% {
+    	transform: scale3d(0.85, 1.35, 1);
+  	}
+
+ 	  70% {
+    	transform: scale3d(1.25, 0.95, 1);
+  	}
+
+      85% {
+    	transform: scale3d(1.05, 1.15, 1);
+  	}
+
+      95% {
+    	transform: scale3d(1.15, 1.05, 1);
+  	}
+	  100% {
+	    transform: scale3d(1, 1, 1);
+	    top: 84px;
+		left: 10px;
+	  }
+	}
+
+.contactBtn {
+	animation-name: rubberEffectContact;
+	animation-duration: 1.2s;
+	animation-timing-function: linear;
+}
+
+@keyframes mobileMenuAnimationHome {
+    0% {
+    	left: 20px;
+    	opacity: 0;
+    	transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+	}
+	/*10% {  
+    	left: 25.000px;
+    }
+    20% {  
+    	left: 30.000px;
+    }
+    30% {
+    	left: 35.000px;
+    }
+    40% {
+    	left: 35.000px;	
+    }
+    50% {
+    	left: 40.000px;
+    }
+    60% { 
+    	left: 45.000px;
+    }
+    70% { 
+    	left: 50.000px;
+    }
+    80% { 
+    	left: 55.000px;
+    }
+    90% {
+    	left: 60.000px;
+    }*/
+	100% {	
+		left: 55.000px;
+		opacity: 1;
+    	transform: none;
+
+	}
+}
+
+@keyframes transitAnimation {
+	0% {
+		transform: rotate(-90deg);
+		opacity: 0;
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-18px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(7px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+
+
+@keyframes mobileMenuAnimationAbout {
+	0% {
+    	left: 20px;
+    	opacity: 0;
+    	transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+	}
+	/*10% {  
+   	    left: 28.000px;
+    }
+    20% {  
+    	left: 36.000px;
+    }
+    30% {
+    	left: 44.000px;
+    }
+    40% {
+    	left: 52.000px;	
+    }
+    50% {
+    	left: 60.000px;
+    }
+    60% { 
+    	left: 68.000px;
+    }
+    70% { 
+    	left: 76.000px;
+    }
+    80% { 
+    	left: 84.000px;
+    }
+    90% {
+    	left: 92.000px;
+    }*/
+	100% {	
+		left: 90.000px;
+		opacity: 1;
+    	transform: none;
+	}
+}
+
+
+
+@keyframes mobileMenuAnimationWork {
+	0% {
+    	left: 20px;
+    	opacity: 0;
+    	transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+	}
+	/*10% {  
+    	left: 25.000px;
+    }
+    20% {  
+    	left: 30.000px;
+    }
+    30% {
+    	left: 35.000px;
+    }
+    40% {
+    left: 35.000px;	
+    }
+    50% {
+    	left: 40.000px;
+    }
+    60% { 
+   	 left: 45.000px;
+    }
+    70% { 
+    	left: 50.000px;
+    }
+    80% { 
+    	left: 55.000px;
+    }
+    90% {
+    	left: 60.000px;
+    }*/
+	100% {	
+		left: 125.000px;
+		opacity: 1;
+    	transform: none;
+	}
+}
+
+
+
+@keyframes mobileMenuAnimationContact {
+	0% {
+    	left: 20px;
+    	opacity: 0;
+    	transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+	}
+	/*10% {  
+    	left: 25.000px;
+    }
+    20% {  
+    	left: 30.000px;
+    }
+    30% {
+    	left: 35.000px;
+    }
+    40% {
+    	left: 35.000px;	
+    }
+    50% {
+    	left: 40.000px;
+    }
+    60% { 
+    	left: 45.000px;
+    }
+    70% { 
+    	left: 50.000px;
+    }
+    80% { 
+    	left: 55.000px;
+    }
+    90% {
+    	left: 60.000px;
+    }*/
+	100% {	
+		left: 160.000px;
+		opacity: 1;
+    	transform: none;
+	}
+}
+
+
+
+@keyframes flipEffect {
+	  0% {
+	    transform: perspective(800px) translateZ(0) rotateY(0) scale(1);
+	    animation-timing-function: ease-out;}
+	  40% {
+	    transform: perspective(800px) translateZ(110px) rotateY(170deg) scale(1);
+	    animation-timing-function: ease-out;
+	  }
+	  50% {
+	    transform: perspective(800px) translateZ(110px) rotateY(190deg) scale(1);
+	    animation-timing-function: ease-in;
+	  }
+	  80% {
+	    transform: perspective(800px) translateZ(0) rotateY(360deg) scale(.95);
+	    animation-timing-function: ease-in;
+	  }
+	  100% {
+	    transform: perspective(800px) translateZ(0) rotateY(360deg) scale(1);
+	    animation-timing-function: ease-in;
+	  }
+	}
+
+.flip-active {
+	animation-name: flipEffect;
+	animation-duration: 1.5s;
+}
+
+
+
+
+

@@ -1,0 +1,537 @@
+body {		
+	font-family: 'Orbitron', sans-serif;
+	letter-spacing: 2px;
+	transition: all 0.3s ease;
+}
+/*Body code*/
+.container-fluid {
+	padding: 60px 0;
+	background-image: url(background.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
+	background-position: 0 60px;
+	min-height: 100vh;	
+}
+
+/*.container-fluid::before {
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/07/ec/26/07ec26bb4188fd51acbd08e5831f305f.jpg'); 
+	background-repeat: repeat-y;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;	
+	opacity: 0.8;
+}*/
+.topBar {	
+	position: fixed;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(#424242, #404040);
+    line-height: 18px;
+    z-index: 1;	
+}
+.topBar .menuButton {
+	height: 100%;
+}
+.topBar .menuButton .tabButton {	
+	border: none;
+    outline: none;
+    text-decoration: none;
+    background: transparent;
+    float: right;
+    font-size: 18px;
+    width: 150px;
+
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    padding-top: 20px;	
+}
+
+.topBar .tabButton:hover {
+	/*background: #f1f1f1;
+	color: #000;*/
+	border-bottom: 4px solid #fff;
+	transition: border 0.8s ease; 
+
+}
+.container-fluid .container h1 {
+	color: #fff;
+}
+.topBar .logo {
+	background-image: url(././logo/logo_white.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: 10px 3px;
+    float: left;
+    height: 100%; 
+    outline: none;
+    background-color: transparent;
+    width: 195px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 14px;
+    padding-left: 70px;
+    padding-top: 15px;
+    text-decoration: none;
+	text-transform: none;
+}
+.topBar .logo:hover {	
+	background-color: #fff;
+	background-image: url(././logo/logo_black.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: 10px 3px;	
+	transition: 0.5s ease-in;
+	color: #000;
+	text-decoration: none;
+	text-transform: none;
+}
+.topBar .menuButton .mobButton {
+	width: 125px;
+	height: 100%;
+	outline: none;
+	border: none;
+	border-bottom: 3px solid transparent;
+	background-color: transparent;
+	font-size: 30px;
+	float: right;
+	color: #fff;
+	font-size: 20px;
+}
+.topBar .menuButton .mobButton:hover {
+	border-bottom: 3px solid #fff;
+	transition: 0.5s ease-in;
+}
+
+/*Dropdown Button*/
+.topBar .menuButton .dropdown-content {
+	position: absolute;	
+	right: 0px;
+	top: 60px;
+}
+.topBar .menuButton .dropdown-content a {
+	display: list-item;
+	list-style-type: none;
+	text-decoration: none;
+	width: 100%;
+	height: 50px;
+	background-color: #cc3863;
+	border: 1px solid #fff;
+	text-align: center;
+	color: #fff;
+	font-weight: 500;
+	padding: 15px 0;
+	font-size: 20px;
+}
+.topBar .menuButton .dropdown-content a:hover {
+	border: 3px solid #fff;
+	transition: 0.5s ease-in;
+}
+
+
+
+/*Certificate Page*/
+.container-fluid .container .tabContent .soloLearn {
+	height: 25vh;
+}
+.container-fluid .container .tabContent .certificateHead {
+	margin: 60px 0;
+	text-align: center;
+}
+.container-fluid .container .tabContent .progressHead {
+	margin: 60px 0;
+	text-align: center;
+}
+.container-fluid .container .tabContent .soloLearn .imgBox {
+	height: 180px;
+	margin-bottom: 20px;	  
+}
+
+
+/*CERTIFICATE IMAGINI*/
+
+.container-fluid .container .tabContent .soloLearn .imgBox #htmlImage {
+	background-image: url(certificate_soloLearn/HTML.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #htmlImage:hover {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png);
+    background-size: contain;
+    background-position: center;
+    transition: 0.4s ease-in;
+    transform: rotate(360deg);
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #cssImage {
+	background-image: url(certificate_soloLearn/CSS.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #cssImage:hover {
+	background-image: url(http://w3widgets.com/responsive-slider/img/css3.png);
+    background-size: contain;
+    background-position: center;
+    transition: 0.4s ease-in;
+    transform: rotate(360deg);
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #javaScriptImage {
+	background-image: url(certificate_soloLearn/JavaScript.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #javaScriptImage:hover {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2000px-Unofficial_JavaScript_logo_2.svg.png);
+    background-size: contain;
+    background-position: center;
+    transition: 0.4s ease-in;
+    transform: rotate(360deg);
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #jqueryImage {
+	background-image: url(certificate_soloLearn/JQUERY.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.container-fluid .container .tabContent .soloLearn .imgBox #jqueryImage:hover {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Logo_jQuery.svg/2000px-Logo_jQuery.svg.png);
+    background-size: contain;
+    background-position: center;
+    transition: 0.4s ease-in;
+    transform: rotate(360deg);
+}
+
+.container-fluid .container .tabContent .certificateHead,
+.container-fluid .container .tabContent .progressHead {
+	margin: 35px 0;
+}
+
+
+/*CERTIFICATE BUTOANE*/
+.container-fluid .container .tabContent .soloLearn button {
+	margin-top: 10px;
+	font-size: 14px;
+	outline: none;
+	display: block;
+	height: 40px;
+	width: 100%;	
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .2);
+	border: 1px solid #fff;
+	padding: 0;	
+	font-weight: 500;
+	color: #fff;
+}
+.container-fluid .container .tabContent .soloLearn button:hover {
+	border-radius: 0;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	border: 1px solid #fff;
+	transition: 0.3s ease-in;
+	font-weight: 500;	
+}
+/*Progress Bar*/
+.container-fluid .container .tabContent .progress {
+	width: 100%;
+	height: 100%;
+	float: left;
+	margin-top: 15px;
+	background-color: rgba(255, 255, 255, .4);
+	padding: 10px 30px;
+}
+.container-fluid .container .tabContent .progress .progress-bar {
+	width: 100%;
+	height: 20px;	
+	margin: 10px 0;
+	float: none;
+	border-radius: 5px;
+}
+.container-fluid .container .tabContent .progress .barHtml {
+	width: 50%;
+	background-color: rgba(228, 77, 38, 0.6);
+	color: #821b00;
+}
+.container-fluid .container .tabContent .progress .barCss {
+	width: 40%;
+	background-color: rgba(1, 112, 186, 0.6);
+	color: #002b48;
+}
+.container-fluid .container .tabContent .progress .barJavaScript {
+	width: 30%;
+	background-color: rgba(247, 223, 30, 0.6);
+	color: #000;
+}
+.container-fluid .container .tabContent .progress .barJquery {
+	width: 10%;
+	background-color: rgba(30, 46, 59, 0.6);
+	color: rgb(32, 156, 206);
+}
+
+/*HOME PAGE*/
+
+.container-fluid .container .tabContent .titleHome {
+	margin: 50px 0;
+	text-align: center;
+}
+.container-fluid .container .tabContent .profilePic {
+	width: 15em;
+	height: auto;
+	border-radius: 50%;
+	display: block;
+	margin: 80px auto;
+}
+.container-fluid .container .tabContent .infoBox {
+	width: 60%;
+    height: auto;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    margin: 2em auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(80, 80, 80, 0.6);
+}
+.container-fluid .container .tabContent .infoBox a {
+	width: 49%;
+    display: inline-block;
+    height: 40px;
+    text-transform: none;
+    text-decoration: none;
+    border: 1px solid #fff;
+    background-color: rgba(64, 63, 63, 0.8);
+    padding: 12px;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: center;
+    border-radius: 5px;
+}
+.container-fluid .container .tabContent .infoBox a span {
+	margin-left: 1em;
+}
+.container-fluid .container .tabContent .infoBox a:hover {
+	background-color: #cc3863;
+	transition: .3s ease-in;
+}
+.container .container .tabContent {
+	height: 100%;
+}
+
+
+/*PROJECT PAGE*/
+.container-fluid .container .tabContent .carousel.slide {
+	border-radius: 10px;
+}
+
+.container-fluid .container .tabContent .carousel.slide .carousel-inner a{
+	color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 2%;
+    right: 13%;
+    font-size: 25px;
+}
+.container-fluid .container .tabContent .carousel .carousel-control {
+	background: none;
+	width: 10%;
+}
+
+.container-fluid .container .tabContent h1 {
+	margin: 50px 0;
+    text-align: center;
+}
+
+.container-fluid .container .tabContent .carousel.slide .carousel-inner .carousel-caption {
+	background: rgba(0, 0, 0, 0.5);
+	margin-bottom: 8px;
+}
+
+/*CONTACT PAGE*/
+
+.container-fluid .container .tabContent .content-section .contact-section {
+	color: #fff;
+
+}
+.container-fluid .container .tabContent .content-section .contact-section .list-inline {
+	background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 0;
+    letter-spacing: -3px;
+}
+.container-fluid .container .tabContent .content-section .contact-section .list-inline a {
+	color: #c3c3c3;;
+	font-size: 30px;
+	letter-spacing: 30px;
+}
+.container-fluid .container .tabContent .content-section .contact-section .list-inline a:hover {
+	color: #fff;
+}
+.container-fluid .container .tabContent .content-section .contact-section .container h2,
+.container-fluid .container .tabContent .content-section .contact-section .container h3 {
+	height: 60px;
+    padding: 15px 0;
+}
+.container-fluid .container .tabContent .content-section .contact-section .container .row .col-md-8 .form-horizontal .btn {
+	border: 1px solid #fff;
+    background-color: rgba(64, 63, 63, 0.8);
+    outline: none;
+    color: #fff;
+}
+.container-fluid .container .tabContent .content-section .contact-section .container .row {
+	margin-right: 15px;
+    margin-left: -15px;
+}
+.container-fluid .container .tabContent .content-section .contact-section .container .row .col-md-8 .form-horizontal .btn:hover {
+	background-color: #cc3863;
+    transition: .3s ease-in;
+}
+
+/*javascript classes*/
+.hide {
+	display: none;
+}
+.unhide {
+	display: block;
+}
+
+/*Mobile*/
+@media (max-width: 990px){
+	.container-fluid .container .tabContent .infoBox a {
+		width: 100%;
+		margin: 5px auto;
+	}
+	.container-fluid .container .tabContent{
+		padding-top: 60px;
+	}
+	.container-fluid .container .tabContent .soloLearn .imgBox {		
+    	margin-bottom: 20px;    	   	
+	}
+	
+	.container-fluid .container .tabContent .profilePic {
+		margin: 60px auto;
+	}
+	.container-fluid .container .tabContent .carousel.slide .carousel-inner a {
+		font-size: 15px;
+	}
+	.container-fluid .container .tabContent .carousel.slide .carousel-inner .carousel-caption {
+		font-size: 10px;
+	}
+
+	.container-fluid .container .tabContent .soloLearn .imgBox #htmlImage,
+	.container-fluid .container .tabContent .soloLearn .imgBox #cssImage,
+	.container-fluid .container .tabContent .soloLearn .imgBox #javaScriptImage,
+	.container-fluid .container .tabContent .soloLearn .imgBox #jqueryImage {
+		width: 0;
+		height: 0;
+	}
+	.container-fluid .container .tabContent .titleHome {
+   		margin: 30px 0;
+	}
+	.topBar .menuButton .dropdown-content {
+		width: 100%;
+		right: 0;
+	}
+	.topBar .menuButton .dropdown-content a {
+		background-color: #cc3863;
+		border: 1px solid #fff;
+	}
+	.container-fluid .container .tabContent .soloLearn .imgBox {
+		height: 50px;
+	}	
+	.container-fluid,
+	.container-fluid::before {	
+		padding: 0;
+	}
+	.container-fluid .container .tabContent .content-section .contact-section .list-inline {
+		
+    	padding: 0 5px;
+	}	
+	.container-fluid .container .tabContent .content-section .contact-section .list-inline a {
+		color: #fff;
+    	font-size: 25px;
+    	letter-spacing: 25px;
+	}
+	
+}
+
+@media (max-width: 440px) {
+	.container-fluid .container .tabContent .soloLearn .imgBox #htmlImage,
+	.container-fluid .container .tabContent .soloLearn .imgBox #cssImage,
+	.container-fluid .container .tabContent .soloLearn .imgBox #javaScriptImage,
+	.container-fluid .container .tabContent .soloLearn .imgBox #jqueryImage {
+		width: 0;
+		height: 0;
+	}
+	.container-fluid .container .tabContent .content-section .contact-section .container .row {
+    	margin-right: 0;
+    	margin-left: -15px;
+	}
+	.container-fluid .container .tabContent .content-section .contact-section .list-inline {
+		height: 70px;
+	}
+	.container-fluid .container .tabContent .infoBox a {
+		width: 100%;
+		margin: 5px auto;
+	}
+	.container-fluid .container .tabContent .certificateHead, .container-fluid .container .tabContent .progressHead {
+    	margin: 20px 0;
+	}
+
+	.container-fluid .container .tabContent .progress {
+		margin-top: 0;
+	}
+	.container-fluid {
+		padding: 0;		
+	}
+	.container-fluid .container .tabContent{
+		padding-top: 60px;
+	}
+	.container-fluid .container .tabContent .soloLearn .imgBox {
+    	height: 40px;
+    	width: 100%;
+	}
+	.topBar .menuButton .dropdown-content {
+		width: 100%;
+		right: 0;
+	}
+	.topBar .menuButton .dropdown-content a {
+		background-color: #cc3863;
+		border: 1px solid #fff;
+	}
+	.container-fluid .container .tabContent .titleHome {
+    	margin: 0 0; 
+	}
+	.container-fluid .container .tabContent .profilePic {
+		margin: 20px auto;
+	}
+	.container-fluid .container .tabContent .infoBox {
+		width: 90%;
+		display: block;
+    	margin: 15px auto;
+	}
+	
+	.container-fluid .container .tabContent .soloLearn {
+    	height: 20vh;
+    }    
+}
+
+

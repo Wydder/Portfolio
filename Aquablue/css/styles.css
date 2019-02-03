@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: 0.3s all ease-in-out;
+}
+
+@font-face {
+    font-family: Dorsa Regular;
+    src: url('/fonts/Dorsa-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Six Caps;
+    src: url('fonts/SixCaps.ttf') format('truetype');
+}
+body {
+	background-image: url('img/big_background.jpg');
+	background-repeat: no-repeat;
+}
+.container {
+	width: 1020px;	
+	margin: 0 auto;
+}
+
+/*=============================
+			TOP BAR
+=============================*/
+
+.container .topBar {
+	width: 100%;
+	height: 180px; 
+}
+.container .topBar .logo {
+	float: left;
+}
+.container .topBar .logo h1{
+	font-family: 'Six Caps', sans-serif;
+	font-size: 33px;
+}
+.container .topBar .logo h1 span{
+	font-family: 'Six Caps', sans-serif;
+	font-size: 45px;
+}
+
+.container .topBar .menu {
+	float: left;
+}
+.container .topBar .menu ul {
+	text-decoration: none;
+	list-style: none;
+	margin-bottom: 0px;
+	margin-left: 18px;
+}
+
+.container .topBar .menu ul li {
+	display: inline-block;
+	font-size: 14px;
+	padding: 88px 0px 76px 17px;
+	font-family: Arial;	
+}
+
+.container .topBar .menu ul li a {
+	color: #000;
+    border-right: 1px solid #000;
+    padding-right: 16px;
+    text-decoration: none;
+    display: block;
+}
+.container .topBar .menu ul li:last-child a {
+	border-right: none;
+}
+.container .topBar .menu ul li a:hover {
+	text-decoration: none;
+}
+
+.container .topBar .socialMedia {
+	float: left;
+	padding: 20px 20px 72px 70px;
+}
+.container .topBar .socialMedia img {
+	vertical-align: unset;
+}
+
+/*=============================
+			INTRO
+=============================*/
+
+.container .intro {
+	font-family: 'Dorsa', sans-serif;
+	margin-top: 40px;
+	height: 255px;
+	position: absolute;
+	width: 100%;
+    left: -65px;
+}
+.container .intro .title {
+	transform: skewX(-35deg);
+	background: rgba(255, 255, 255, 0.25);
+	color: #fef5ca;
+	font-size: 75px;
+	line-height: 175px;
+    width: 51%;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+}
+.container .intro .title::after {
+	width: 3px;
+    height: 215px;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -17px;
+    background-color: #fef2b8;
+}
+
+.container .intro .title h1 {
+	transform: matrix(0.69, 0, 0.7, 1, 0, 0);
+	margin-left: 120px;
+}
+
+
+.container .intro .motto {
+	color: #45bfad;
+    display: inline-block;
+    height: 195px;
+    position: absolute;
+    padding-left: 70px;
+    margin-left: -10px;
+}
+.container .intro .motto h1 {
+	width: 478px;
+	font-size: 65px;
+	line-height: 55px;
+}
+
+/*=============================
+			CONTENT
+=============================*/
+.container .content {
+	height: 420px;
+    width: 100%;
+    margin-top: 360px;
+}
+.container .content .circle {
+	width: 260px;
+	height: 285px;
+	border-radius: 50%;
+	float: left;
+	background: #fef2b8;
+	padding: 45px 35px 0px 35px;
+	text-align: center;
+	margin-right: 10px;
+	box-shadow: 5px -5px 5px rgba(69, 191, 173, 0.3);
+	position: relative;
+}
+.container .content .circle h1 {
+	font-family: 'Dorsa';
+    font-size: 75px;
+    font-weight: 400;
+    margin-top: 10px;
+	color: #45bfad;
+}
+.container .content .circle p {
+	font-family: Arial;
+	font-size: 13px;
+	color: #000;
+	line-height: 23px;
+}
+.container .content .circle img {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 11px);
+}
+
+/*=============================
+			FOOTER
+=============================*/
+.container .footer {
+	width: 100%;
+	height: 45px;
+	padding-top: 10px;
+	bottom: 0;
+	border-top: 1px solid #fef2b8;
+}
+.container .footer div {
+	width: 50%;
+	font-size: 12px;
+	font-family: Arial;
+	line-height: 31px;
+	float: left;
+}
+
+.container .footer div:nth-child(2) {
+	float: right;
+    text-align: right;
+}
+.container .footer div img {
+	float: right;
+	margin-left: 12px;
+}
